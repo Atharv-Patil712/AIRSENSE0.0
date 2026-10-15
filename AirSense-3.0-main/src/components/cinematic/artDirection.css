@@ -1,0 +1,147 @@
+/* Scoped editorial composition; dashboard styles are intentionally untouched. */
+.cinematic { --cin-muted: #8b9cb0; --cin-radius: 0; }
+.cinematic .cin-stage-shell { width: 100%; max-width: 1680px; margin: auto; padding: 100px 7vw; }
+.cinematic .cin-stage-grid { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 3vw; align-items: center; }
+.cinematic .cin-stage-grid > :first-child { grid-column: 1 / 6; min-width: 0; }
+.cinematic .cin-stage-grid > :nth-child(2) { grid-column: 8 / 13; min-width: 0; }
+.cinematic .cin-heading { font-size: clamp(2rem,3.8vw,4.5rem); max-width: 18ch; line-height: 1.04; font-weight: 500; text-wrap: pretty; }
+.cinematic .cin-lede { max-width: 43ch; font-size: 14px; line-height: 1.75; }
+.cinematic .cin-kicker { margin-bottom: 2rem; color: #adc6d8; }
+.cinematic .cin-wordmark { font-size: clamp(3.3rem,11.5vw,11.8rem); font-weight: 600; letter-spacing: -.065em; color: #f1f5f9; background: none; }
+.cinematic #stage-hero .cin-stage-grid > :first-child { grid-column: 1 / 10; }
+.cinematic #stage-hero .cin-heading { max-width: none; }
+.cinematic #stage-hero .cin-lede { max-width: 30ch; margin-top: 2.3rem; }
+.cinematic .cin-tagline { font-family: var(--font-body); font-size: 20px; font-weight: 400; margin: 0; }
+.cinematic .cin-cue { margin-top: 1rem; font-size: 11px; }
+.cinematic .cin-cue-dot { height: 26px; width: 1px; border-radius: 0; box-shadow: none; animation: none; }
+.cinematic .cin-cta,.cinematic .cin-cta-ghost { border-radius: 0; box-shadow: none; letter-spacing: 0; }
+.cinematic .cin-cta { background: #daeaf0; padding: .8rem 1.1rem; }
+.cinematic .cin-cta:hover { box-shadow: none; transform: none; }
+.cinematic .cin-cta-ghost { border: 0; border-bottom: 1px solid #526675; padding-inline: 0; margin-inline: .6rem; }
+.cinematic .cin-nav > div { max-width: none; padding-inline: 7vw; }
+.cinematic .cin-nav-mark { border: 0; background: none; box-shadow: none; }
+.cinematic .cin-rail { display: block; left: 7vw; right: 7vw; top: auto; bottom: 20px; transform: none; }
+.cinematic .cin-rail-list { flex-direction: row; gap: 2.5rem; }
+.cinematic .cin-rail-button { min-height: 40px; gap: .65rem; }
+.cinematic .cin-rail-label { display: inline; font-size: 10px; text-transform: uppercase; }
+.cinematic .cin-rail-tick,.cinematic .cin-rail-button.is-active .cin-rail-tick { width: 18px; box-shadow: none; }
+.cinematic .cin-rail-number { font: 10px var(--font-mono); color: #94a3b8; }
+.cinematic .cin-rail-progress { left: 0; top: auto; bottom: -2px; height: 1px; width: 100%; transform: scaleX(var(--cin-progress)); transform-origin: left; }
+.cinematic .cin-card,.cinematic .cin-grid,.cinematic .cin-recap { border: 0; border-radius: 0; background: none; box-shadow: none; backdrop-filter: none; overflow: visible; }
+.cinematic .cin-card-head { padding: 1rem 0; border-top: 1px solid var(--cin-border-strong); }
+.cinematic .cin-card-body { padding: 1rem 0; }
+.cinematic .cin-cell { background: none; padding: 1rem 1rem 1rem 0; border-top: 1px solid var(--cin-border-strong); }
+.cinematic .cin-grid { gap: 1rem; }
+.cinematic .cin-cell-value { font-size: clamp(1.15rem,1.6vw,1.8rem); line-height: 1.2; }
+.cinematic .cin-note,.cinematic .cin-editorial-note { background: none; border: 0; border-left: 1px solid #526675; border-radius: 0; padding: 0 0 0 1rem; margin-top: 1.6rem; font-size: 12px; line-height: 1.7; color: var(--cin-text-2); }
+.cinematic .cin-tag,.cinematic .cin-readout-trend { border: 0; background: none; padding: 0; border-radius: 0; }
+.cinematic .cin-readout-value { font-size: clamp(4rem,7vw,7rem); font-weight: 400; }
+.cinematic .cin-scale,.cinematic .cin-bar,.cinematic .cin-bar-fill { border-radius: 0; height: 3px; }
+.cinematic .cin-readout-window { letter-spacing: 0; text-transform: none; }
+.cinematic .cin-annotate-label { color: #a7bbc9; font: 11px var(--font-body); padding-bottom: 1rem; }
+.cinematic .cin-annotate-values { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem 2rem; }
+.cinematic .cin-annotate-value { display: flex; flex-direction: column; border-top: 1px solid #526675; padding-top: .8rem; position: relative; }
+.cinematic .cin-annotate-value::before { content: ''; position: absolute; top: -3px; left: 0; width: 5px; height: 5px; background: #a5d6e5; border-radius: 50%; }
+.cinematic .cin-annotate-name { font: 11px var(--font-body); color: #b4c5d1; }
+.cinematic .cin-annotate-num { font: 500 clamp(1.5rem,2.5vw,2.7rem) var(--font-mono); padding-top: .6rem; }
+.cinematic .cin-annotate-value.is-dominant .cin-annotate-name { color: var(--cin-accent); }
+.cinematic .cin-site-reading { display: flex; justify-content: space-between; gap: 1rem; padding: .7rem 0; border-top: 1px solid var(--cin-border-strong); font-size: 12px; }
+.cinematic .cin-site-reading dd,.cinematic .cin-coordinate { font-family: var(--font-mono); }
+.cinematic .cin-coordinate { display: block; margin-top: .3rem; font-size: 9px; color: #94a3b8; }
+.cinematic .cin-site-reading dd { color: #c4b5fd; white-space: nowrap; }
+.cinematic .cin-compass { width: 160px; margin: 0 0 1.5rem auto; }
+.cinematic .cin-legend { justify-content: flex-end; }
+.cinematic .cin-plume-source { text-align: right; margin-top: 1rem; }
+.cinematic #stage-environment .cin-stage-grid > :first-child { grid-column: 8 / 13; grid-row: 1; }
+.cinematic #stage-environment .cin-stage-grid > :nth-child(2) { grid-column: 1 / 5; grid-row: 1; align-self: end; }
+.cinematic #stage-plume .cin-stage-grid > :nth-child(2) { align-self: end; }
+.cinematic #stage-brief .cin-stage-grid > :first-child { grid-column: 1 / 9; }
+.cinematic #stage-brief .cin-stage-grid > :nth-child(2) { grid-column: 10 / 13; align-self: end; }
+.cinematic #stage-brief .cin-heading { max-width: 21ch; }
+.cinematic .cin-brief { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+.cinematic .cin-brief-item { padding: 1.2rem 0; }
+.cinematic .cin-brief-label { font: 500 17px var(--font-display); color: #e2e8f0; }
+.cinematic .cin-brief-body { font-size: 13px; }
+.cinematic #stage-enter .cin-stage-grid > :first-child { grid-column: 1 / 10; max-width: none; margin: 0; text-align: left; }
+.cinematic #stage-enter .cin-heading { max-width: 20ch; }
+.cinematic #stage-enter .cin-lede { margin-left: 0; }
+.cinematic #stage-enter .cin-stage-grid .flex { justify-content: flex-start; }
+.cinematic .cin-recap { gap: 2rem; margin-inline: 0; }
+.cinematic .cin-recap-step { background: none; border-top: 1px solid var(--cin-border-strong); padding: 1rem 0; }
+.cinematic.cin-animated [data-reveal] { transform: translateY(8px); transition-duration: 1s; }
+.cinematic.cin-animated [data-reveal].is-revealed { transform: none; }
+@media (max-width: 1023px), (max-height: 760px) {
+  .cinematic .cin-stage { min-height: auto; }
+  .cinematic .cin-stage-panel { position: relative; height: auto; min-height: 100svh; padding: 0; }
+  .cinematic .cin-stage-shell { padding: 110px 7vw 100px; }
+}
+@media (max-width: 1023px) {
+  .cinematic .cin-stage-grid { display: flex; flex-direction: column; align-items: stretch; gap: 3rem; }
+  .cinematic .cin-heading { font-size: clamp(2.4rem,6vw,4rem); }
+  .cinematic .cin-stage-grid > div { width: 100%; }
+  .cinematic .cin-lede { max-width: 48ch; }
+  .cinematic .cin-scrim { background: linear-gradient(90deg,#05070ded,#05070d77); }
+  .cinematic .cin-annotate-values { gap: 2.5rem; }
+  .cinematic .cin-rail { bottom: 0; left: 0; right: 0; padding: .25rem 7vw; background: #05070ded; }
+  .cinematic .cin-rail-list { justify-content: space-between; gap: .5rem; }
+  .cinematic .cin-rail-tick { display: none; }
+  .cinematic .cin-rail-button { gap: .35rem; }
+  .cinematic .cin-rail-label { font-size: 9px; }
+  .cinematic .cin-nav > div { padding-inline: 5vw; }
+  .cinematic .cin-nav-region { display: none; }
+  .cinematic .cin-cta-sm { font-size: 11px; padding: .65rem; }
+  .cinematic .cin-compass { width: 135px; }
+}
+@media (max-width: 639px) {
+  .cinematic .cin-brief { grid-template-columns: 1fr; }
+  .cinematic .cin-grid { grid-template-columns: 1fr 1fr; }
+  .cinematic .cin-tagline { font-size: 17px; }
+  .cinematic .cin-nav-link { font-size: 11px; padding: .5rem; }
+  .cinematic .cin-recap { grid-template-columns: 1fr 1fr; }
+}
+.cinematic.reduce-motion .cin-stage { min-height: auto; }
+.cinematic.reduce-motion .cin-stage-panel { position: relative; height: auto; min-height: 100svh; }
+.cinematic.reduce-motion *, .cinematic.reduce-motion *::before, .cinematic.reduce-motion *::after { animation: none !important; transition: none !important; }
+.cinematic.reduce-motion [data-reveal] { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .cinematic *, .cinematic *::before, .cinematic *::after { animation: none !important; transition: none !important; }
+}
+
+/* A large comparative field, rather than a dashboard dial. */
+.cinematic .cin-risk-field { position: relative; margin: 0; }
+.cinematic .cin-risk-field > svg { display: block; width: 100%; height: auto; }
+.cinematic .cin-risk-score { position: absolute; top: 46%; left: 52%; transform: translate(-50%,-50%); display: flex; flex-direction: column; align-items: center; white-space: nowrap; }
+.cinematic .cin-risk-number { font: 400 clamp(3rem,6vw,6rem)/1.15 var(--font-mono); color: var(--cin-text); }
+.cinematic .cin-risk-number small { font-size: 12px; color: var(--cin-muted); margin-left: .5rem; }
+.cinematic .cin-risk-level { font: 500 13px var(--font-body); margin-top: .7rem; }
+.cinematic .cin-risk-field figcaption { text-align: right; }
+.cinematic #stage-risk .cin-stage-grid > :nth-child(2) { grid-column: 7 / 13; }
+.cinematic #stage-risk .cin-cell-value > span { font-family: var(--font-body); }
+
+/* Keep the geographic field and its site register inside the desktop reading area. */
+.cinematic .cin-methane-field { margin: 0 0 1.5rem; }
+.cinematic .cin-methane-field svg { display: block; width: 100%; height: clamp(160px, 23vh, 250px); }
+.cinematic .cin-methane-field figcaption { font: 10px var(--font-mono); color: var(--cin-muted); text-align: right; }
+
+/* Structural wrappers around the annotation and register blocks.
+   These are semantic `dl`/`div` elements, so their default margins have to
+   be zeroed or they break the editorial grid rhythm. No chrome is added:
+   the visual language comes from the rules on the children. */
+.cinematic .cin-annotate,
+.cinematic .cin-annotate-row,
+.cinematic .cin-site-register,
+.cinematic .cin-site-readings,
+.cinematic .cin-brief-context { margin: 0; padding: 0; }
+
+.cinematic .cin-annotate-row { display: block; }
+.cinematic .cin-site-readings { display: block; }
+.cinematic .cin-site-register { padding-top: .25rem; }
+
+/* The provenance block closes the brief, so it sits on the baseline of the
+   column rather than floating at the top. */
+.cinematic .cin-brief-context { padding-top: .75rem; }
+
+/* The AQI annotation column is the instrument readout opposite the copy:
+   it reads from the top of the column like a measurement panel. */
+.cinematic .cin-annotate { padding-top: .25rem; }
+
